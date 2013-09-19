@@ -34,6 +34,31 @@ public class TestEnumSample implements IExec
 		}
 	}
 	
+	public enum TestIntEnum implements AttrClass
+	{
+		first(1)
+		, second(2)
+		, third(3);
+		
+		private int nValue;
+		private TestIntEnum(int nValue)
+		{
+			this.nValue = nValue;
+		}
+		@Override
+		public void setValue(Object objValue) {
+			// TODO Auto-generated method stub
+			this.nValue = (int) objValue;
+		}
+		@Override
+		public Object getValue() {
+			// TODO Auto-generated method stub
+			return this.nValue;
+		}
+		
+		
+	}
+	
 	public TestEnumSample()
 	{
 		
@@ -42,6 +67,6 @@ public class TestEnumSample implements IExec
 	@Override
 	public void Exec()
 	{
-		
+		System.out.println(TestIntEnum.first.name() + " is " + TestIntEnum.first.getValue());
 	}
 }
