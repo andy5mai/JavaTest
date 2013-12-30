@@ -48,7 +48,7 @@ public class TestEnumSample implements IExec
 		@Override
 		public void setValue(Object objValue) {
 			// TODO Auto-generated method stub
-			this.nValue = (int) objValue;
+			this.nValue = (Integer) objValue;
 		}
 		@Override
 		public Object getValue() {
